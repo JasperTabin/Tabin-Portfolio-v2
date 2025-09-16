@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0a0a0a;
+  --font-body: 'Signika Negative', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+/* Animation For hand movement */
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(20deg); }
+  50%  { transform: rotate(-15deg); }
+  75%  { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hand-wave:hover {
+  animation: wave 1.5s ease-in-out infinite;
+  transform-origin: bottom right; 
+}
