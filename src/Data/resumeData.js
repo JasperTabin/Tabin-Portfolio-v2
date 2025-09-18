@@ -11,6 +11,7 @@ export const resumeData = {
         "Created CDSP student handbook layout",
         "Provided office and administrative support",
       ],
+        logo: "/images/digipen.png" // put images in your public folder or import them
     },
   ],
 
@@ -22,12 +23,16 @@ Education: [
       place: "Bachelor of Science in Information Technology",
       details: ["Cumlaude", "Deans Lister", "Best in Capstone"],
       //   tags: ["Final Year Project", "2nd Year Project"],
+        logo: "/images/digipen.png" // put images in your public folder or import them
+
     },
     {
       date: "2015 - 2021",
       title: "Saint Francis of Assisi College",
       place: "General Academic Strand",
       details: ["Graduated with Honors"],
+        logo: "/images/digipen.png" // put images in your public folder or import them
+
     },
   ],
 };

@@ -7,7 +7,7 @@ export const Navbar = () => {
         href="#home"
         className="text-lg font-bold text-white hover:text-gray-300 transition-colors"
       >
-        JT
+        JAS.
       </a>
 
       <div className="flex space-x-6 text-sm">
