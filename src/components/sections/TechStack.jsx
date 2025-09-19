@@ -24,6 +24,7 @@ const stack = [
 export const TechStack = () => {
   return (
     <section id="techstack">
+      <h2 className="text-2xl text-white font-semibold pb-4">Tech Stack</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {stack.map(({ name, color, icon: Icon }) => (
           <div

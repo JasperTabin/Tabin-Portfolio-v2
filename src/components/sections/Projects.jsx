@@ -6,6 +6,16 @@ export default function Projects({ projects = defaultProjects }) {
   return (
     <section id="projects">
       <div className="max-w-5xl mx-auto">
+        <div className="flex items-center justify-between pb-4">
+          <h2 className="text-2xl text-white font-semibold">Projects</h2>
+          <a
+            href="/projects"
+            className="text-sm font-semibold text-white/90 hover:underline"
+          >
+            More projects →
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p) => (
             <article
@@ -39,16 +49,8 @@ export default function Projects({ projects = defaultProjects }) {
             </article>
           ))}
         </div>
-        
+
         {/* Need to create another page to view all the projects */}
-        <div className="mt-4">
-          <a
-            href="/projects"
-            className="inline-block text-sm font-semibold text-white/90 hover:underline"
-          >
-            More projects →
-          </a>
-        </div>
       </div>
     </section>
   );

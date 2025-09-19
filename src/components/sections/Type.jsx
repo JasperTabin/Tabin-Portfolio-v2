@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import bongoStatic from "../../assets/Cat.png"; // first frame static image
-import bongoAnim from "../../assets/cats.gif"; // full animated GIF
+import bongoStatic from "../../assets/Cat.png";
+import bongoAnim from "../../assets/cats.gif"; 
 
 export default function TypingTest() {
   const originalText = "The quick brown fox jumps over the lazy dog.";
@@ -13,7 +13,6 @@ export default function TypingTest() {
   const timeoutRef = useRef();
   const boxRef = useRef();
 
-  // Timer effect
   useEffect(() => {
     if (!start || done) return;
     const id = setInterval(
@@ -23,12 +22,18 @@ export default function TypingTest() {
     return () => clearInterval(id);
   }, [start, done]);
 
-  // Detect finish or reset
   useEffect(() => {
     if (input === originalText && !done) {
       setDone(true);
       setTime(((Date.now() - start) / 1000).toFixed(3));
+
+      const resetTimer = setTimeout(() => {
+        reset();
+      }, 3000);
+
+      return () => clearTimeout(resetTimer);
     }
+
     if (input.length === 0 && done) {
       setDone(false);
       setTime("0.000");
@@ -65,7 +70,6 @@ export default function TypingTest() {
   return (
     <section id="Type">
       <div className="border border-neutral-700 p-4 rounded-lg bg-transparent relative">
-        {/* Target text */}
         <p className="mb-3 text-base select-none">
           {done ? (
             <span className="text-white font-semibold">
@@ -73,7 +77,7 @@ export default function TypingTest() {
             </span>
           ) : (
             originalText.split("").map((ch, i) => {
-              let color = "text-gray-400"; // default
+              let color = "text-gray-400";
               if (i < input.length) {
                 color = input[i] === ch ? "text-white" : "text-red-500";
               }
@@ -86,7 +90,6 @@ export default function TypingTest() {
           )}
         </p>
 
-        {/* Input + Bongo Cat */}
         <div className="relative">
           <textarea
             ref={boxRef}
@@ -101,17 +104,15 @@ export default function TypingTest() {
             disabled={false}
           />
 
-          {/* Always show the cat at the top of input border */}
           <img
             src={done || typing ? bongoAnim : bongoStatic}
             alt="Bongo Cat"
-            className="absolute -top-15 right-3 w-16" // adjust -top-10 for alignment
+            className="absolute -top-15 right-3 w-16"
             draggable={false}
           />
         </div>
 
-        {/* Footer (timer + TAB) */}
-        {focused && (
+        {!done && focused && (
           <div className="flex justify-between mt-3 text-sm text-gray-400">
             <span>
               <kbd className="px-1 py-0.5 border rounded border-gray-600 bg-neutral-800">
