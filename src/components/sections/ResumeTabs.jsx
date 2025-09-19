@@ -28,7 +28,7 @@ export const ResumeTabs = () => {
   return (
     <section id="resume">
       
-      <h2 className="text-2xl text-white font-semibold pb-4">Experience</h2>
+      <h2 className="text-2xl text-white font-semibold pb-4">My Career</h2>
 
       <div className="mb-2 grid w-full grid-cols-2 rounded-lg bg-neutral-800 p-1 h-9">
         {tabs.map((tab) => (

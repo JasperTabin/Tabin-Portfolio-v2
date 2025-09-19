@@ -17,11 +17,19 @@ export const Navbar = () => {
         >
           Projects
         </a>
+
         <a
           href="#contact"
           className="text-white/70 hover:text-white transition-colors"
         >
           Contact
+        </a>
+
+        <a
+          href="#about"
+          className="text-white/70 hover:text-white transition-colors"
+        >
+          About
         </a>
       </div>
     </nav>
