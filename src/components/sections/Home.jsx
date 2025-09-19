@@ -1,7 +1,21 @@
+import bannerGif from "/src/assets/Cat-Banner.gif";
+
+
 export const Home = () => {
   return (
     <section id="profile">
-      <div className="flex items-center space-x-4">
+
+      <div className="relative w-full h-42 overflow-hidden rounded-t-2xl">
+  <img
+    src={bannerGif}
+    alt="Banner"
+    className="w-full h-full object-cover"
+  />
+
+<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
+</div>
+
+      <div className="flex items-center space-x-4 -mt-0">
         <img
           src="/src/assets/Profile.jpg"
           alt="Profile"
@@ -40,3 +54,5 @@ export const Home = () => {
     </section>
   );
 };
+
+

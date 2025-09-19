@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+
 import { Home } from "./components/sections/Home";
 import { Navbar } from "./components/Navbar";
 import { ResumeTabs } from "./components/sections/ResumeTabs";
@@ -14,8 +15,8 @@ export default function App() {
   useEffect(() => {
     gsap.fromTo(
       mainRef.current,
-      { clipPath: "inset(0 0 100% 0)" }, // fully hidden (from bottom)
-      { clipPath: "inset(0 0 0% 0)", duration: 1, ease: "power2.out" } // reveal
+      { clipPath: "inset(0 0 100% 0)" },
+      { clipPath: "inset(0 0 0% 0)", duration: 1, ease: "power2.out" }
     );
   }, []);
 
