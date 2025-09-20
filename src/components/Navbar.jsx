@@ -1,36 +1,36 @@
-// Links are not working (In-Progress)
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mb-8">
-      <a
-        href="#home"
+      <Link
+        to="/"
         className="text-lg font-bold text-white hover:text-gray-300 transition-colors"
       >
         JAS.
-      </a>
+      </Link>
 
       <div className="flex space-x-6 text-sm">
-        <a
-          href="#projects"
+        <Link
+          to="/projects"
           className="text-white/70 hover:text-white transition-colors"
         >
           Projects
-        </a>
+        </Link>
 
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="text-white/70 hover:text-white transition-colors"
         >
           Contact
-        </a>
+        </Link>
 
-        <a
-          href="#about"
+        <Link
+          to="/about"
           className="text-white/70 hover:text-white transition-colors"
         >
           About
-        </a>
+        </Link>
       </div>
     </nav>
   );

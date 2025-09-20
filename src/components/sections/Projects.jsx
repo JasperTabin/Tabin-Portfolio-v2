@@ -17,7 +17,7 @@ export default function Projects({ projects = defaultProjects }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((p) => (
+          {projects.slice(0, 2).map((p) => (
             <article
               key={p.id}
               className="group bg-transparent border border-neutral-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
@@ -49,8 +49,6 @@ export default function Projects({ projects = defaultProjects }) {
             </article>
           ))}
         </div>
-
-        {/* Need to create another page to view all the projects */}
       </div>
     </section>
   );
