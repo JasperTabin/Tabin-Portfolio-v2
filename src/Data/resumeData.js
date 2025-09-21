@@ -5,8 +5,8 @@ export const resumeData = {
   Work: [
     {
       date: "January 2025 – May 2025",
-      title: "Administrative assistant & IT Support Intern",
-      place: "Lyceum of Alabang",
+      title: "Lyceum of Alabang ",
+      place: "Administrative assistant & IT Support Intern",
       details: [
         "Designed enrollment tarpaulin and SHS org chart",
         "Contributed to graduation booklet cover design",

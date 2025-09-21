@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCat } from "react-icons/fa6"; // import cat
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -7,9 +8,10 @@ export default function Footer() {
     <footer className="w-full border-t border-neutral-700 py-4 flex items-center justify-between bg-transparent">
       <button
         onClick={scrollToTop}
-        className="text-sm text-white font-extralight hover:text-neutral-300 transition-colors"
+        className="text-white hover:text-neutral-300 transition-colors"
+        aria-label="Scroll to top"
       >
-        2025 JAS.
+        <FaCat size={20} />
       </button>
 
       <div className="flex space-x-4">

@@ -8,7 +8,7 @@ export default function Projects({ projects = defaultProjects }) {
     <section id="projects">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between pb-4">
-          <h2 className="text-2xl text-white font-semibold">Projects</h2>
+          <h2 className="text-2xl text-white font-semibold">Pinned Projects</h2>
           <a
             href="/projects"
             className="text-sm font-semibold text-white/90 hover:underline"

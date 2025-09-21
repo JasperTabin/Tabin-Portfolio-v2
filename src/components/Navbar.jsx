@@ -25,12 +25,12 @@ export const Navbar = () => {
           Contact
         </Link>
 
-        <Link
+        {/* <Link
           to="/about"
           className="text-white/70 hover:text-white transition-colors"
         >
           About
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
