@@ -1,6 +1,7 @@
 /* Project Section showcasing only 2 projects. */
 
 import { defaultProjects } from "../../Data/ProjectData";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects({ projects = defaultProjects }) {
   return (
@@ -22,21 +23,34 @@ export default function Projects({ projects = defaultProjects }) {
               key={p.id}
               className="group bg-transparent border border-neutral-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
             >
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${p.title}`}
-                className="block"
-              >
-                <div className="w-full aspect-video bg-neutral-900 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+              <div className="relative w-full aspect-video bg-neutral-900 flex items-center justify-center overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {p.links?.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-2xl hover:text-gray-300"
+                      aria-label={link.label}
+                    >
+                      {link.label === "Source" ? (
+                        <FaGithub />
+                      ) : (
+                        <FaExternalLinkAlt />
+                      )}
+                    </a>
+                  ))}
                 </div>
-              </a>
+              </div>
+
               <div className="p-4">
                 <h3
                   id={`project-${p.id}`}
