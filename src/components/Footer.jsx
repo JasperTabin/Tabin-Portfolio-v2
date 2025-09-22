@@ -5,10 +5,14 @@ export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="w-full border-t border-neutral-700 py-4 flex items-center justify-between bg-transparent">
+    <footer 
+      className="w-full border-t py-4 flex items-center justify-between bg-transparent"
+      style={{ borderColor: 'var(--border)' }}
+    >
       <button
         onClick={scrollToTop}
-        className="text-white hover:text-neutral-300 transition-colors"
+        className="transition-colors hover:opacity-70"
+        style={{ color: 'var(--text-primary)' }}
         aria-label="Scroll to top"
       >
         <FaCat size={20} />
@@ -19,7 +23,8 @@ export default function Footer() {
           href="https://github.com/JasperTabin"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-neutral-300 transition-colors"
+          className="transition-colors hover:opacity-70"
+          style={{ color: 'var(--text-primary)' }}
         >
           <FaGithub size={20} />
         </a>
@@ -27,13 +32,15 @@ export default function Footer() {
           href="https://www.linkedin.com/in/jasper-tabin-1b8aaa348/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-neutral-300 transition-colors"
+          className="transition-colors hover:opacity-70"
+          style={{ color: 'var(--text-primary)' }}
         >
           <FaLinkedin size={20} />
         </a>
         <a
           href="mailto:tabinjasper@gmail.com"
-          className="text-white hover:text-neutral-300 transition-colors"
+          className="transition-colors hover:opacity-70"
+          style={{ color: 'var(--text-primary)' }}
           aria-label="Send Email"
         >
           <FaEnvelope size={20} />

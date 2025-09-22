@@ -25,15 +25,30 @@ export const All_Projects = () => {
             )}
 
             <div className="pt-4">
-              <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-              <p className="text-sm text-white/70 mt-2">{project.description}</p>
+              <h3 
+                className="text-lg font-semibold"
+                style={{ color: 'var(--text-primary)' }}
+              >
+                {project.title}
+              </h3>
+              <p 
+                className="text-sm mt-2"
+                style={{ color: 'var(--text-secondary)' }}
+              >
+                {project.description}
+              </p>
 
               {project.tech && project.tech.length > 0 && (
                 <div className="mt-3 flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 bg-white/10 text-white text-xs rounded-full transition-all duration-300"
+                      className="px-3 py-1 text-xs rounded-full transition-all duration-300 hover:opacity-80"
+                      style={{ 
+                        backgroundColor: 'var(--secondary)',
+                        color: 'var(--text-primary)',
+                        opacity: '0.8'
+                      }}
                     >
                       {t}
                     </span>
@@ -45,16 +60,23 @@ export const All_Projects = () => {
                 {project.links &&
                   project.links.map((link) => {
                     let Icon = null;
-                    let classes =
-                      "px-4 py-2 flex items-center gap-2 font-medium rounded-lg transition-all duration-300 transform hover:scale-105";
+                    let baseClasses = "px-4 py-2 flex items-center gap-2 font-medium rounded-lg transition-all duration-300 transform hover:scale-105";
+                    let buttonStyle = {};
 
                     if (link.label.toLowerCase() === "source") {
                       Icon = FaGithub;
-                      classes += " bg-black text-white hover:bg-gray-800";
+                      buttonStyle = {
+                        backgroundColor: 'var(--text-primary)',
+                        color: 'var(--primary)'
+                      };
                     }
                     if (link.label.toLowerCase() === "visit") {
                       Icon = FaExternalLinkAlt;
-                      classes += " bg-white text-black hover:bg-gray-100";
+                      buttonStyle = {
+                        backgroundColor: 'var(--primary)',
+                        color: 'var(--text-primary)',
+                        border: `1px solid var(--border)`
+                      };
                     }
 
                     return (
@@ -63,7 +85,14 @@ export const All_Projects = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={classes}
+                        className={baseClasses}
+                        style={buttonStyle}
+                        onMouseEnter={(e) => {
+                          e.target.style.opacity = '0.8';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.opacity = '1';
+                        }}
                       >
                         {Icon && <Icon />}
                         {link.label}

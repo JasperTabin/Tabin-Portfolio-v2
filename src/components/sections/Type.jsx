@@ -69,20 +69,29 @@ export default function TypingTest() {
 
   return (
     <section id="Type">
-      <div className="border border-neutral-700 p-4 rounded-lg bg-transparent relative">
+      <div 
+        className="border p-4 rounded-lg bg-transparent relative"
+        style={{ borderColor: 'var(--border)' }}
+      >
         <p className="mb-3 text-base select-none">
           {done ? (
-            <span className="text-white font-semibold">
+            <span 
+              className="font-semibold"
+              style={{ color: 'var(--text-primary)' }}
+            >
               Nice! Your time is {time} seconds
             </span>
           ) : (
             originalText.split("").map((ch, i) => {
-              let color = "text-gray-400";
+              let color = 'var(--text-secondary)';
               if (i < input.length) {
-                color = input[i] === ch ? "text-white" : "text-red-500";
+                color = input[i] === ch ? 'var(--text-primary)' : '#ef4444';
               }
               return (
-                <span key={i} className={color}>
+                <span 
+                  key={i} 
+                  style={{ color }}
+                >
                   {ch}
                 </span>
               );
@@ -93,7 +102,11 @@ export default function TypingTest() {
         <div className="relative">
           <textarea
             ref={boxRef}
-            className="w-full bg-transparent border border-neutral-700 rounded-md p-3 text-gray-100 resize-none outline-none"
+            className="w-full bg-transparent border rounded-md p-3 resize-none outline-none"
+            style={{ 
+              borderColor: 'var(--border)',
+              color: 'var(--text-primary)'
+            }}
             rows={2}
             placeholder="Start typing here..."
             value={done ? "Bongo Cat is celebrating" : input}
@@ -113,9 +126,18 @@ export default function TypingTest() {
         </div>
 
         {!done && focused && (
-          <div className="flex justify-between mt-3 text-sm text-gray-400">
+          <div 
+            className="flex justify-between mt-3 text-sm"
+            style={{ color: 'var(--text-secondary)' }}
+          >
             <span>
-              <kbd className="px-1 py-0.5 border rounded border-gray-600 bg-neutral-800">
+              <kbd 
+                className="px-1 py-0.5 border rounded"
+                style={{ 
+                  borderColor: 'var(--border)',
+                  backgroundColor: 'var(--secondary)'
+                }}
+              >
                 TAB
               </kbd>{" "}
               - restart

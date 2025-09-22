@@ -8,11 +8,20 @@ export const ResumeTabs = () => {
 
   const Avatar = ({ logo, title }) => (
     <div className="relative z-10 flex-shrink-0">
-      <div className="w-12 h-12 rounded-full bg-neutral-900 border-2 border-neutral-700 overflow-hidden flex items-center justify-center">
+      <div 
+        className="w-12 h-12 rounded-full border-2 overflow-hidden flex items-center justify-center"
+        style={{ 
+          backgroundColor: 'var(--secondary)',
+          borderColor: 'var(--border)'
+        }}
+      >
         {logo ? (
           <img src={logo} alt={title} className="w-full h-full object-cover" />
         ) : (
-          <span className="text-sm font-semibold text-white">
+          <span 
+            className="text-sm font-semibold"
+            style={{ color: 'var(--text-primary)' }}
+          >
             {title
               .split(" ")
               .slice(0, 2)
@@ -28,9 +37,17 @@ export const ResumeTabs = () => {
   return (
     <section id="resume">
       
-      <h2 className="text-2xl text-white font-semibold pb-4">My Career</h2>
+      <h2 
+        className="text-2xl font-semibold pb-4"
+        style={{ color: 'var(--text-primary)' }}
+      >
+        My Career
+      </h2>
 
-      <div className="mb-2 grid w-full grid-cols-2 rounded-lg bg-neutral-800 p-1 h-9">
+      <div 
+        className="mb-2 grid w-full grid-cols-2 rounded-lg p-1 h-9"
+        style={{ backgroundColor: 'var(--secondary)' }}
+      >
         {tabs.map((tab) => (
           <button
             key={tab}
@@ -38,17 +55,27 @@ export const ResumeTabs = () => {
             className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium transition-all
               ${
                 active === tab
-                  ? "bg-neutral-900 text-white shadow font-semibold"
-                  : "text-neutral-400"
+                  ? "shadow font-semibold"
+                  : ""
               }`}
+            style={{
+              backgroundColor: active === tab ? 'var(--primary)' : 'transparent',
+              color: active === tab ? 'var(--text-primary)' : 'var(--text-secondary)'
+            }}
           >
             {tab}
           </button>
         ))}
       </div>
 
-      <div className="border border-neutral-700 rounded-xl relative">
-        <div className="absolute left-12 top-0 bottom-0 w-px bg-neutral-700 z-0" />
+      <div 
+        className="border rounded-xl relative"
+        style={{ borderColor: 'var(--border)' }}
+      >
+        <div 
+          className="absolute left-12 top-0 bottom-0 w-px z-0" 
+          style={{ backgroundColor: 'var(--border)' }}
+        />
 
         <div className="p-6 space-y-8 relative z-10">
           {resumeData[active].map((item, idx) => (
@@ -59,17 +86,35 @@ export const ResumeTabs = () => {
 
               <div>
                 {item.date && (
-                  <p className="text-xs text-neutral-400">{item.date}</p>
+                  <p 
+                    className="text-xs"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
+                    {item.date}
+                  </p>
                 )}
                 {item.title && (
-                  <h3 className="font-semibold text-white">{item.title}</h3>
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: 'var(--text-primary)' }}
+                  >
+                    {item.title}
+                  </h3>
                 )}
                 {item.place && (
-                  <p className="text-sm text-neutral-300">{item.place}</p>
+                  <p 
+                    className="text-sm"
+                    style={{ color: 'var(--text-primary)' }}
+                  >
+                    {item.place}
+                  </p>
                 )}
 
                 {item.details?.length > 0 && (
-                  <ul className="list-disc list-inside text-sm text-neutral-400 mt-2 space-y-1">
+                  <ul 
+                    className="list-disc list-inside text-sm mt-2 space-y-1"
+                    style={{ color: 'var(--text-secondary)' }}
+                  >
                     {item.details.map((d, i) => (
                       <li key={i}>{d}</li>
                     ))}
@@ -81,7 +126,12 @@ export const ResumeTabs = () => {
                     {item.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 rounded-md text-xs font-medium border border-neutral-600 text-neutral-300"
+                        className="px-3 py-1 rounded-md text-xs font-medium border"
+                        style={{ 
+                          borderColor: 'var(--border)',
+                          color: 'var(--text-secondary)',
+                          backgroundColor: 'var(--secondary)'
+                        }}
                       >
                         {tag}
                       </span>

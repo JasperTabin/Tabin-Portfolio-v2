@@ -28,7 +28,7 @@ function AppContent() {
   return (
     <main
       ref={mainRef}
-      className="relative mx-auto mt-6 max-w-xl px-6 space-y-10 overflow-hidden"
+      className="relative mx-auto max-w-xl px-6 space-y-10 overflow-hidden"
     >
       <Navbar />
       <Routes>
