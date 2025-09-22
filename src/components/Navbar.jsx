@@ -17,20 +17,6 @@ export const Navbar = () => {
         >
           Projects
         </Link>
-
-        <Link
-          to="/contact"
-          className="text-white/70 hover:text-white transition-colors"
-        >
-          Contact
-        </Link>
-
-        {/* <Link
-          to="/about"
-          className="text-white/70 hover:text-white transition-colors"
-        >
-          About
-        </Link> */}
       </div>
     </nav>
   );

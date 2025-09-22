@@ -4,7 +4,7 @@ export const defaultProjects = [
   {
     id: 1,
     title: "IoT Water Monitoring System",
-    description: "IoT water monitoring system with real-time alerts and mobile app integration",
+    description: "A capstone project that monitors water quality and usage using IoT technology. Built with Arduino, Firebase, and MIT app inventor",
     image: "/public/Capstone.jpg",
     links: [
       { label: "Visit", url: "https://www.youtube.com/watch?v=FpUaKoGismA&ab_channel=JohnGabrielGerolia", type: "primary" },
@@ -13,7 +13,7 @@ export const defaultProjects = [
   {
     id: 2,
     title: "Urban Web",
-    description: "Modern interior design showcase with clean layouts and visuals",
+    description: "A website we made on our 3rd year for our project in Web Development class using HTML, CSS, JavaScript.",
     image: "/public/Website.jpg",
     links: [
       { label: "Source", url: "https://github.com/JasperTabin/LaboLinaw-Urban-Web", type: "secondary" },
@@ -23,7 +23,7 @@ export const defaultProjects = [
   {
     id: 3,
     title: "Cat Maze Game",
-    description: "Interactive maze game featuring smooth gameplay mechanics and responsive design",
+    description: "A fun and interactive maze game built with React where you guide a cat to the finish line built with React, CSS and JavaScript",
     image: "/public/Desktop2.png",
     links: [
       { label: "Source", url: "https://github.com/JasperTabin/my-react-game/tree/main", type: "secondary" },

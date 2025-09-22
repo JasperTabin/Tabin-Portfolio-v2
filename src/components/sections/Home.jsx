@@ -38,19 +38,31 @@ export const Home = () => {
             <span className="absolute left-0 top-0 transition-transform duration-800 transform group-hover:-translate-y-5 group-hover:opacity-0 opacity-100 text-white/70">
               🟢 Available for work
             </span>
-            <span className="absolute left-0 top-0 transition-transform duration-800 transform translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 text-white/70">
-              Reach out ✉︎
-            </span>
+            <span
+  onClick={() => window.location.href = "mailto:tabinjasper@gmail.com"}
+  className="absolute left-0 top-0 transition-transform duration-800 transform translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 text-white/70 cursor-pointer"
+>
+  Reach out ✉︎
+</span>
+
           </div>
         </div>
       </div>
 
-      {/* About */}
+      {/* Brief Description */}
       <p className="mt-4 text-sm text-white leading-relaxed max-w-prose">
-        I’m a fresh graduate and aspiring front-end developer with a passion for
-        turning ideas into visually engaging, responsive, and user-friendly web
-        experiences.
+        Frontend Developer from the Philippines. I enjoy turning designs into code.
+        When not coding, I'm exploring gaming, music, and coffee shops. Open to new opportunities!
       </p>
+
+      {/* About me Section */}
+      <div>
+      <h2 className="text-xl text-white font-semibold pt-4">About</h2>
+        <p className="pt-1 text-sm text-white leading-relaxed max-w-prose">
+            Graduated in 2025 with a BS in Information Technology, earning honors as Dean’s Lister, Best in Capstone, and Cum Laude. 
+            Focused on building clean, modern web applications.
+          </p>
+      </div>
 
       {/* Socials */}
       <div className="mt-4">

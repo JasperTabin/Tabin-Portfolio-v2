@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaCat } from "react-icons/fa6"; // import cat
 
 export default function Footer() {
@@ -30,6 +30,13 @@ export default function Footer() {
           className="text-white hover:text-neutral-300 transition-colors"
         >
           <FaLinkedin size={20} />
+        </a>
+        <a
+          href="mailto:tabinjasper@gmail.com"
+          className="text-white hover:text-neutral-300 transition-colors"
+          aria-label="Send Email"
+        >
+          <FaEnvelope size={20} />
         </a>
       </div>
     </footer>
