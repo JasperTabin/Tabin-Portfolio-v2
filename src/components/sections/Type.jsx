@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import bongoStatic from "/Cat.png";
-import bongoAnim from "/Cats.gif"; 
 
 export default function TypingTest() {
+  // Use direct paths for public assets - no imports needed
+  const bongoStatic = "/Cat.png";
+  const bongoAnim = "/Cats.gif";
+
   const originalText = "The quick brown fox jumps over the lazy dog.";
   const [input, setInput] = useState("");
   const [start, setStart] = useState(null);
