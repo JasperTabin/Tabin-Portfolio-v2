@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import bongoStatic from "../../assets/Cat.png";
+import bongoStatic from "/Cat.png";
 import bongoAnim from "/Cats.gif"; 
 
 export default function TypingTest() {
