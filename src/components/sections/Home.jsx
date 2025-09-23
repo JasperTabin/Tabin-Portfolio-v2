@@ -17,7 +17,7 @@ export const Home = () => {
       {/* Profile + Intro */}
       <div className="flex items-center gap-4">
         <img
-          src="/src/assets/Profile.jpg"
+          src="/Profile.jpg"
           alt="Profile"
           className="w-[70px] h-[70px] mt-2 rounded-full object-cover border-2 object-[center_20%]"
           style={{ borderColor: 'var(--border)' }}

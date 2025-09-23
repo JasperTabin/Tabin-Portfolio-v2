@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function TypingTest() {
-  // Use direct paths for public assets - no imports needed
   const bongoStatic = "/Cat.png";
   const bongoAnim = "/Cats.gif";
 
