@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import bongoStatic from "../../assets/Cat.png";
-import bongoAnim from "public/Cats.gif"; 
+import bongoAnim from "/Cats.gif"; 
 
 export default function TypingTest() {
   const originalText = "The quick brown fox jumps over the lazy dog.";
