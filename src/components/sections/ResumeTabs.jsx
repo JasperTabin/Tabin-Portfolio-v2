@@ -46,7 +46,7 @@ export const ResumeTabs = () => {
 
       <div 
         className="mb-2 grid w-full grid-cols-2 rounded-lg p-1 h-9"
-        style={{ backgroundColor: 'var(--secondary)' }}
+        style={{ backgroundColor: 'var(--border)' }}
       >
         {tabs.map((tab) => (
           <button
