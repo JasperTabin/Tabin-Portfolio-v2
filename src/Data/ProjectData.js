@@ -10,6 +10,7 @@ export const defaultProjects = [
       { label: "Visit", url: "https://www.youtube.com/watch?v=FpUaKoGismA&ab_channel=JohnGabrielGerolia", type: "primary" },
     ],
   },
+
   {
     id: 2,
     title: "Urban Web",
@@ -20,6 +21,7 @@ export const defaultProjects = [
       { label: "Visit", url: "https://jaspertabin.github.io/LaboLinaw-Urban-Web/", type: "primary" },
     ],
   },
+
   {
     id: 3,
     title: "Cat Maze Game",
@@ -30,13 +32,5 @@ export const defaultProjects = [
       { label: "Visit", url: "https://jaspertabin.github.io/my-react-game/", type: "primary" },
     ],
   },
-  {
-    id: 4,
-    title: "Portfolio Website v1",
-    description: "A modern and responsive personal portfolio website built with React and TailwindCSS",
-    image: "/Desktop.png",
-    links: [
-      { label: "Visit", url: "https://tabin-portfolio.vercel.app/", type: "primary" },
-    ],
-  },
+
 ];
